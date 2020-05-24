@@ -7,6 +7,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 header {
@@ -41,8 +42,22 @@ header li {
 
 .main {
   background-color: rgb(241, 241, 241);
-  text-align: center;
   z-index: 1;
   height: 100%;
   padding-top: 50px;
+  margin-top: 50px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 50%;
+  background-color: rgb(255, 255, 255);
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+.blog_content {
+  padding: 10px 0px;
+  border-bottom: solid 1px rgb(241, 241, 241);
 }

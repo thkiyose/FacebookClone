@@ -1,7 +1,8 @@
 <div class="main">
   <% @blogs.each do |blog| %>
     <div class="container">
-      <%= blog.content %>
+      <p class="blog_content"><%= blog.content %></p>
+      <p><span class="far fa-heart"></span><%= link_to "いいね", blogs_path %></p>
     </div>
   <% end %>
 </div>
