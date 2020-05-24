@@ -1,3 +1,7 @@
 <div class="main">
-あ
+  <% @blogs.each do |blog| %>
+    <div class="container">
+      <%= blog.content %>
+    </div>
+  <% end %>
 </div>
