@@ -61,3 +61,16 @@ header li {
   padding: 10px 0px;
   border-bottom: solid 1px rgb(241, 241, 241);
 }
+
+.btn input {
+  border-style: none;
+  background-color: rgb(97, 132, 255);
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.btn input:hover {
+  opacity: 0.8;
+}
