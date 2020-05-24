@@ -7,9 +7,24 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/45ec1eb6b9.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
+    <header>
+      <span class="fab fa-facebook-f fa-2x fa-fw header_icon"></span>
+      <nav class="header_nav">
+        <ul>
+          <div class="nav_left">
+            <li><%= link_to "投稿一覧", blog_index_path %></li>
+            <li><%= link_to "お気に入り", blog_index_path %></li>
+          </div>
+          <div class="nav_right">
+            <li><%= link_to "ログイン", blog_index_path %></li>
+          </div>
+        </ul>
+      </nav>
+    </header>
     <%= yield %>
   </body>
 </html>

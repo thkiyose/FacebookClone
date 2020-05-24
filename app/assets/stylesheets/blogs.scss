@@ -1,3 +1,48 @@
+html,body {
+  height: 100%;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  height: 50px;
+  width: 100%;
+  z-index:99;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+.header_icon {
+  padding-top: 10px;
+  float:left;
+}
+
+header ul {
+  padding: 0px 60px;
+}
+
+.nav_right {
+  float: right;
+}
+
+header li {
+  float: left;
+  padding: 0px 20px;
+}
+
 .main {
-  background-color:  rgb(219, 219, 219);
+  background-color: rgb(241, 241, 241);
+  text-align: center;
+  z-index: 1;
+  height: 100%;
+  padding-top: 50px;
 }
