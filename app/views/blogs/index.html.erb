@@ -1,6 +1,9 @@
 <% @blogs.each do |blog| %>
   <div class="container">
+    <p class="blog_user"><%= blog.user.name %></p>
     <p class="blog_content"><%= blog.content %></p>
-    <p><span class="far fa-heart"></span><%= link_to "いいね", blogs_path %></p>
+    <% if current_user.id != blog.user_id %>
+      <p><span class="far fa-heart"></span><%= link_to "いいね", blogs_path %></p>
+    <% end %>
   </div>
 <% end %>
