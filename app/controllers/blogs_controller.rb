@@ -17,6 +17,10 @@ class BlogsController < ApplicationController
     end
   end
 
+  def show
+    @blog = Blog.find_by(id: params[:id])
+  end
+
   private
   def blog_params
     params.require(:blog).permit(:content).merge(user_id: current_user.id)

@@ -2,6 +2,11 @@ html,body {
   height: 100%;
 }
 
+h1 {
+  font-size: 1.7rem;
+  text-align: center;
+}
+
 ul {
   list-style: none;
 }
@@ -75,9 +80,17 @@ header li {
 
 .blog_content {
   padding: 10px 0px;
-  border-bottom: solid 1px rgb(241, 241, 241);
 }
 
+.under_menu {
+  padding: 0;
+  border-top: solid 1px rgb(241, 241, 241);
+}
+.under_menu li {
+  float:left;
+  padding-right: 20px;
+  padding-top :20px;
+}
 .blog_form textarea {
   border-style: none;
   background-color: rgb(241, 241, 241);
@@ -99,10 +112,40 @@ header li {
   opacity: 0.8;
 }
 
+.btn {
+  border-style: none;
+  background-color: rgb(97, 132, 255);
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.btn :hover {
+  opacity: 0.8;
+}
+
+.btn a {
+  color: rgb(255, 255, 255);
+}
+
+.show_content {
+  font-size: 1.5rem;
+}
+
+.show_username, .show_createdat {
+  font-size: 0.9rem;
+}
+
 .flash {
   position: fixed;
   top: 50;
   width: 100%;
   text-align: center;
   background-color: rgb(249, 160, 118);
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
 }
