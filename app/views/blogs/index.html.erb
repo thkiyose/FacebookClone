@@ -5,8 +5,5 @@
     <%= image_tag(blog.image.url) if blog.image && blog.image.url %>
     <ul class="under_menu clearfix">
     <li><%= link_to "詳細", blog_path(blog.id) %></li>
-    <% if current_user && current_user.id != blog.user_id %>
-      <li><span class="far fa-heart"></span><%= link_to "いいね", blogs_path %></li>
-    <% end %>
   </div>
 <% end %>
