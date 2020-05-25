@@ -1,5 +1,7 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show,:edit,:update,:destroy]
+  before_action :authenticate_user,  only: [:new,:create,:edit, :update,:destroy]
+  before_action :ensure_correct_user, only: [:edit, :update,:destroy]
   def index
     @blogs = Blog.all.order(created_at: :DESC)
   end
@@ -47,5 +49,11 @@ class BlogsController < ApplicationController
 
   def set_blog
     @blog = Blog.find_by(id: params[:id])
+  end
+
+  def ensure_correct_user
+    if current_user.id !=  @blog.user_id
+      redirect_to blogs_path
+    end
   end
 end
