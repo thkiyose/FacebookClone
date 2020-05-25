@@ -2,6 +2,7 @@
   <button class="general_btn"><%= link_to "戻る", :back %></button>
   <h1>詳細</h1>
   <p class="show_content"><%= @blog.content %></p>
+  <p><%= image_tag(@blog.image.url) if @blog.image && @blog.image.url %></p>
   <p class="show_username">投稿者：<%= @blog.user.name %></p>
   <p class="show_createdat">投稿日時：<%= @blog.created_at %></p>
   <ul class="under_menu clearfix">

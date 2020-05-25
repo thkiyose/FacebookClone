@@ -2,6 +2,7 @@
   <div class="container">
     <p class="blog_user"><%= blog.user.name %></p>
     <p class="blog_content"><%= blog.content %></p>
+    <%= image_tag(blog.image.url) if blog.image && blog.image.url %>
     <ul class="under_menu clearfix">
     <li><%= link_to "詳細", blog_path(blog.id) %></li>
     <% if current_user && current_user.id != blog.user_id %>

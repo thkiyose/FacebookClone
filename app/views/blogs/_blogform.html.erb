@@ -5,7 +5,12 @@
         <%= message %>
       <% end %>
     <% end %>
-    <%= f.text_area :content %>
+    <p><%= f.text_area :content %></p>
+    <p>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+    <%= f.hidden_field :image_cache %>
+    </p>
     <p class="btn"><%= f.submit "投稿" %></p>
   <% end %>
 </div>
