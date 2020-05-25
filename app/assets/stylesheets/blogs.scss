@@ -107,24 +107,24 @@ header li {
   padding: 10px;
   cursor: pointer;
 }
-
 .btn input:hover {
   opacity: 0.8;
 }
 
-.btn {
+.general_btn {
   border-style: none;
   background-color: rgb(97, 132, 255);
+  color: rgb(255, 255, 255);
   border-radius: 5px;
   padding: 10px;
   cursor: pointer;
 }
 
-.btn :hover {
-  opacity: 0.8;
+.general_btn:hover {
+  background-color: rgba(97, 132, 255, 0.8);
 }
 
-.btn a {
+.general_btn a {
   color: rgb(255, 255, 255);
 }
 

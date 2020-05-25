@@ -1,11 +1,11 @@
 <div class="container">
-  <button class="btn"><%= link_to "戻る", :back %></button>
+  <button class="general_btn"><%= link_to "戻る", :back %></button>
   <h1>詳細</h1>
   <p class="show_content"><%= @blog.content %></p>
   <p class="show_username">投稿者：<%= @blog.user.name %></p>
   <p class="show_createdat">投稿日時：<%= @blog.created_at %></p>
   <ul class="under_menu clearfix">
-    <% if current_user.id != @blog.user_id %>
+    <% if current_user && current_user.id != @blog.user_id %>
       <li><span class="far fa-heart"></span><%= link_to "いいね", blogs_path %></li>
     <% end %>
     <li><%= link_to "編集", edit_blog_path(@blog.id) %></li>
