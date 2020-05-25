@@ -7,8 +7,9 @@
   <ul class="under_menu clearfix">
     <% if current_user && current_user.id != @blog.user_id %>
       <li><span class="far fa-heart"></span><%= link_to "いいね", blogs_path %></li>
+      <% else %>
+      <li><%= link_to "編集", edit_blog_path(@blog.id) %></li>
+      <li><%= link_to "削除", blog_path, method: :delete %></li>
     <% end %>
-    <li><%= link_to "編集", edit_blog_path(@blog.id) %></li>
-    <li><%= link_to "削除", blog_path, method: :delete %></li>
   </ul>
 </div>

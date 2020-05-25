@@ -21,6 +21,20 @@ class BlogsController < ApplicationController
     @blog = Blog.find_by(id: params[:id])
   end
 
+  def edit
+    @blog = Blog.find_by(id: params[:id])
+  end
+
+  def update
+    @blog = Blog.find_by(id: params[:id])
+    if @blog.update(blog_params)
+      redirect_to blogs_path
+      flash[:notice] = "編集が完了しました。"
+    else
+      render :edit
+    end
+  end
+
   private
   def blog_params
     params.require(:blog).permit(:content).merge(user_id: current_user.id)
