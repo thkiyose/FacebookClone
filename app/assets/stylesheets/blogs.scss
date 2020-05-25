@@ -74,3 +74,11 @@ header li {
 .btn input:hover {
   opacity: 0.8;
 }
+
+.flash {
+  position: fixed;
+  top: 50;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(249, 160, 118);
+}

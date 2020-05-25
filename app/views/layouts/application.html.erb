@@ -17,14 +17,25 @@
         <ul>
           <div class="nav_left">
             <li><%= link_to "投稿一覧", blogs_path %></li>
+            <% if logged_in? %>
             <li><%= link_to "お気に入り", blogs_path %></li>
+            <% end %>
           </div>
           <div class="nav_right">
+            <% if logged_in? %>
+            <li><%= link_to "マイページ", user_path(current_user.id) %></li>
+            <li><%= link_to "ログアウト", new_session_path %></li>
+            <% else %>
+            <li><%= link_to "ログイン", new_session_path %></li>
             <li><%= link_to "サインイン", new_user_path %></li>
+            <% end %>
           </div>
         </ul>
       </nav>
     </header>
+    <% flash.each do |key,value| %>
+      <%= content_tag(:div,value,class:"flash") %>
+    <% end %>
     <div class="main">
       <%= yield %>
     </div>
