@@ -1,6 +1,7 @@
 html,body {
   height: 100%;
 }
+
 ul {
   list-style: none;
 }
@@ -46,10 +47,11 @@ header li {
   height: 100%;
   padding-top: 50px;
   margin-top: 50px;
+  overflow: scroll;
 }
 
 .container {
-  margin: 0 auto;
+  margin: 30px auto;
   width: 50%;
   background-color: rgb(255, 255, 255);
   padding: 40px;
@@ -70,6 +72,14 @@ header li {
 .blog_content {
   padding: 10px 0px;
   border-bottom: solid 1px rgb(241, 241, 241);
+}
+
+.blog_form textarea {
+  border-style: none;
+  background-color: rgb(241, 241, 241);
+  border-radius: 5px;
+  width: 80%;
+  height: 150px;
 }
 
 .btn input {

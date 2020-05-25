@@ -18,6 +18,7 @@
           <div class="nav_left">
             <li><%= link_to "投稿一覧", blogs_path %></li>
             <% if logged_in? %>
+            <li><%= link_to "新規投稿", new_blog_path %></li>
             <li><%= link_to "お気に入り", blogs_path %></li>
             <% end %>
           </div>
