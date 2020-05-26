@@ -136,6 +136,17 @@ header li {
   font-size: 0.9rem;
 }
 
+.buttons {
+  margin: 0 auto;
+  padding: 0px;
+  display: inline-block;
+}
+
+.buttons li {
+  float: left;
+  margin: 20px;
+}
+
 .flash {
   position: fixed;
   top: 50;

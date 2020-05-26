@@ -1,5 +1,5 @@
 <div class="blog_form">
-  <%= form_with(model:@blog, local:true) do |f| %>
+  <%= form_with(model:@blog, local:true, url:confirm_or_not) do |f| %>
     <% if @blog.errors.any? %>
       <% @blog.errors.full_messages.each do |message| %>
         <%= message %>

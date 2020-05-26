@@ -41,6 +41,9 @@ class BlogsController < ApplicationController
     flash[:notice] = "投稿を削除しました"
   end
 
+  def confirm
+    @blog = Blog.new(blog_params)
+  end
   private
 
   def blog_params
