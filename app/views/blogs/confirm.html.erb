@@ -4,11 +4,11 @@
   <%= form_with(model:@blog,local:true) do |f| %>
     <%= f.hidden_field :content %>
     <% if @blog.image_url %>
-      <%= image_tag(@blog.image.url) %>
+      <p><%= image_tag(@blog.image.url) %></p>
     <% end %>
     <%= f.hidden_field :image_cache %>
     <ul class="buttons clearfix">
-    <li><button class="general_btn"><%= link_to "戻る", :back %></button><li>
+    <li class="btn"><%= f.submit "戻る", name: 'back' %><li>
     <li class="btn"><%= f.submit "送信" %></li>
     </ul>
   <% end %>
