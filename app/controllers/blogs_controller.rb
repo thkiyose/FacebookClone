@@ -12,11 +12,15 @@ class BlogsController < ApplicationController
 
   def create
     @blog = Blog.new(blog_params)
-    if @blog.save
-      redirect_to blogs_path
-      flash[:notice] = "投稿が完了しました。"
-    else
+    if params[:back]
       render :new
+    else
+      if @blog.save
+        redirect_to blogs_path
+        flash[:notice] = "投稿が完了しました。"
+      else
+        render :new
+      end
     end
   end
 
@@ -43,6 +47,7 @@ class BlogsController < ApplicationController
 
   def confirm
     @blog = Blog.new(blog_params)
+    render :new if @blog.invalid?
   end
   private
 
